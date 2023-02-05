@@ -1,0 +1,47 @@
+{
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"contracts": {
+		"HelloWorld": {
+		  "source": "./flow/cadence/contracts/HelloWorld.cdc",
+		  "aliases": {
+			"testnet": "0x741dac035a02ca4e"
+		  }
+		},
+		"HoldNumber": {
+			"source": "./flow/cadence/contracts/HoldNumber.cdc",
+			"aliases": {
+			  "testnet": "0x741dac035a02ca4e"
+			}
+		  }
+	  },
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "470743c770393c4a5ca98cbb85f7c8754920c5350d99dc6d0e92d4f4503e1f4a"
+		},
+		"testnet-account": {
+			"address": "0x741dac035a02ca4e",
+			"key": {
+			  "type": "hex",
+			  "index": 0,
+			  "signatureAlgorithm": "ECDSA_P256",
+			  "hashAlgorithm": "SHA3_256",
+			  "privateKey": "26902b46c6ab1443fc6c6003c7ad4b65ad950bc8854041960b893ae98eec1570"
+			}
+		  }
+	},
+	"deployments": {
+		"testnet": {
+		  "testnet-account": [
+			"HelloWorld",
+			"HoldNumber"
+		  ]
+		}
+	  }
+	
+}
