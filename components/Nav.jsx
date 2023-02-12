@@ -1,5 +1,5 @@
 import styles from '../styles/Nav.module.css';
-import * as fcl from "@onflow/fcl";
+const fcl = require("@onflow/fcl");
 import "../flow/config.js";
 import { useState, useEffect } from 'react';
 
