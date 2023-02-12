@@ -2,7 +2,8 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Nav from "../components/Nav.jsx";
 import { useState, useEffect } from 'react';
-import * as fcl from "@onflow/fcl";
+const fcl = require("@onflow/fcl");
+
 
 export default function Home() {
   const [greeting, setGreeting] = useState('');
